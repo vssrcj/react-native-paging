@@ -1,7 +1,8 @@
-import React from 'react';
-import Paging from './Paging';
-import { Text, View, Button } from 'react-native';
+import React from 'react'
+import Paging from './Paging'
+import { Text, View, Button } from 'react-native'
 
+/* eslint-disable react/prop-types */
 const Body = ({ Page, myCustomHeader, pop, stack }) => (
    <View style={{ flex: 1 }}>
       <View style={{ backgroundColor: '#888', padding: 10 }}><Text style={{ fontSize: 24 }}>{myCustomHeader}</Text></View>
@@ -15,11 +16,12 @@ const Body = ({ Page, myCustomHeader, pop, stack }) => (
             />
          </View>
       </View>
-      <View style={{ bottom: 80,  position: 'absolute' }}>
+      <View style={{ bottom: 80, position: 'absolute' }}>
          <Text>{stack.map(s => s.key + '/')}</Text>
       </View>
    </View>
 )
+/*eslint-enable */
 
 const page1Data = (paging) => (
    <View>
@@ -74,9 +76,9 @@ const dynamicPage = {
             title='Pop to Page 1'
          />
          <Button
-         onPress={() => paging.push('page-2')}
-         title='Page 2'
-      />
+            onPress={() => paging.push('page-2')}
+            title='Page 2'
+         />
       </View>
    )
 }

@@ -1,9 +1,16 @@
-import React, { Component } from 'react'
-import { StyleSheet, Text, View, BackHandler } from 'react-native'
+import { Component } from 'react'
+import { BackHandler } from 'react-native'
+import PropTypes from 'prop-types'
 
 const last = (list) => list[list.length-1]
 
 export default class Paging extends Component {
+   static propTypes = {
+      activePage: PropTypes.string,
+      pages: PropTypes.array.isRequired,
+      body: PropTypes.func.isRequired
+   }
+
    constructor(props) {
       super(props)
       const activePageKey = props.activePage || props.pages[0].key
@@ -59,7 +66,7 @@ export default class Paging extends Component {
 
    render() {
       const {
-         props: { pages, body },
+         props: { body },
          state: { stack },
          push,
          pop,

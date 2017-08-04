@@ -1,0 +1,23 @@
+{
+		"parser": "babel-eslint",
+    "env": {
+        "browser": true
+	 },
+    "extends": [
+		 "standard",
+		   "eslint:recommended",
+		  "plugin:react/recommended"
+	 ],
+    "plugins": [
+		 "react",
+    		"react-native",
+        "standard",
+        "promise"
+	 ],
+	"rules": {
+    "react-native/no-unused-styles": 2,
+	 "react-native/split-platform-components": 2,
+	 "react/display-name": 0,
+	   "indent": [2, 3]
+  }
+}
