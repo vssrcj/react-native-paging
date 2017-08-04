@@ -1,4 +1,4 @@
-# React Native Router
+# React Native Paging
 
 #### It now includes
 * Each page has access to the following methods:
